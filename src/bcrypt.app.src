@@ -1,7 +1,7 @@
 %% -*- mode: erlang;erlang-indent-level: 2;indent-tabs-mode: nil -*-
 {application, bcrypt,
  [{description, "An Erlang wrapper (NIF or port program) for the OpenBSD password scheme, bcrypt."},
-  {vsn, git},
+  {vsn, "0.5.0-p3a"},
   {registered, [bcrypt_sup, bcrypt_nif_worker, bcrypt_port_sup, bcrypt_pool]},
   {mod, {bcrypt_app, []}},
   {applications, [kernel, stdlib, crypto]},
@@ -14,6 +14,9 @@
 
          % Size of port program pool
          {pool_size, 4}
-        ]}
+        ]},
+  {maintainers,["chef", "Heinz N. Gies"]},
+  {licenses,["BSD"]},
+  {links,[{"Github","https://github.com/chef/erlang-bcrypt"}]}
  ]
 }.
